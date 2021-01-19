@@ -1,0 +1,13 @@
+.total {
+   display: flex;
+   flex-direction: column;
+   margin-top: 1em;
+   width: 28em;
+   height: 6em;
+}
+.total-value {
+   margin-top: 1em;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
