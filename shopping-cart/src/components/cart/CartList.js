@@ -20,7 +20,7 @@ let CartList = () => {
 
    return (
       <>
-         {cartList && cartList.length > 0 && (
+         {cartList && !!cartList.length && (
             <Paper className="cart-container">
                <List className={classes.root}>
                   {cartList.map((item) => (

@@ -4,7 +4,7 @@ import "./total.css"
 import Typography from "@material-ui/core/Typography"
 import { useSelector, useDispatch } from "react-redux"
 import Button from "@material-ui/core/Button"
-import { clearAction } from "../../actions/actions"
+import { clearAction } from "../../reducers/CartSlice"
 
 let Total = () => {
    const dispatch = useDispatch()

@@ -3,6 +3,7 @@
    width: auto;
 }
 .root {
+   position: relative;
    max-width: 15.62em;
    margin: 1em;
    background-color: white;
@@ -18,4 +19,20 @@
 }
 .price-span {
    height: fit-content;
+}
+
+.media::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 10em;
+   opacity: 0.1;
+   background: rgb(28, 110, 215);
+   background: linear-gradient(
+      45deg,
+      rgba(28, 110, 215, 1) 35%,
+      rgba(219, 55, 215, 1) 72%
+   );
 }

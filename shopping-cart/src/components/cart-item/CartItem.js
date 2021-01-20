@@ -7,7 +7,7 @@ import DeleteIcon from "@material-ui/icons/Delete"
 import "./cart-item.css"
 import { useSelector, useDispatch } from "react-redux"
 
-import { deleteAction, setQuantityAction } from "../../actions/actions"
+import { deleteAction, setQuantityAction } from "../../reducers/CartSlice"
 
 let CartItem = ({ id, name, price }) => {
    const dispatch = useDispatch()
@@ -16,8 +16,8 @@ let CartItem = ({ id, name, price }) => {
 
    let setQuantityHandler = (e) => {
       let value = e.target.value
-
-      if (value > 0) dispatch(setQuantityAction(id, parseInt(value)))
+      if (value > 0)
+         dispatch(setQuantityAction({ id, quantity: parseInt(value) }))
    }
 
    return (
@@ -35,6 +35,7 @@ let CartItem = ({ id, name, price }) => {
             onChange={(e) => setQuantityHandler(e)}
          />
          <IconButton
+            style={{ paddingLeft: "1.5em" }}
             color="secondary"
             aria-label="delete"
             onClick={() => dispatch(deleteAction(id))}

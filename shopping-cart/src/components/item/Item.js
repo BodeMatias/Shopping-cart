@@ -12,7 +12,7 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCartOutlined"
 
 import { useDispatch } from "react-redux"
 
-import { addAction } from "../../actions/actions"
+import { addAction } from "../../reducers/CartSlice"
 
 let Item = ({ id, name, price }) => {
    const dispatch = useDispatch()
