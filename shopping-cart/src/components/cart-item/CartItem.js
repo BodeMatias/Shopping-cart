@@ -35,7 +35,7 @@ let CartItem = ({ id, name, price }) => {
             onChange={(e) => setQuantityHandler(e)}
          />
          <IconButton
-            style={{ paddingLeft: "1.5em" }}
+            style={{ marginLeft: "1em" }}
             color="secondary"
             aria-label="delete"
             onClick={() => dispatch(deleteAction(id))}

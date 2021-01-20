@@ -33,11 +33,13 @@ let CartSlice = createSlice({
    },
 })
 
+const { actions, reducer } = CartSlice
+
 export const {
    addToCart: addAction,
    removeFromCart: deleteAction,
    setQuantity: setQuantityAction,
    clear: clearAction,
-} = CartSlice.actions
+} = actions
 
-export { CartSlice }
+export { reducer }

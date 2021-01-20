@@ -1,6 +1,6 @@
 import { createStore } from "redux"
-import { CartSlice } from "../reducers/CartSlice"
+import { reducer } from "../reducers/CartSlice"
 
-let store = createStore(CartSlice.reducer)
+let store = createStore(reducer)
 
 export default store
